@@ -1,70 +1,53 @@
-## Standard Energy Efficiency Data (SEED) Platform™
-
-[![Build Status][build-img]][build-url] [![Coverage Status][coveralls-img]][coveralls-url]
-
-The SEED Platform is a web-based application that helps organizations easily
-manage data on the energy performance of large groups of buildings. Users can
-combine data from multiple sources, clean and validate it, and share the
-information with others. The software application provides an easy, flexible,
-and cost-effective method to improve the quality and availability of data to
-help demonstrate the economic and environmental benefits of energy efficiency,
-to implement programs, and to target investment activity.
-
-The SEED application is written in Python/Django, with AngularJS, Bootstrap,
-and other javascript libraries used for the front-end. The back-end database
-is required to be PostgreSQL.
-
-The SEED web application provides both a browser-based interface for users to
-upload and manage their building data, as well as a full set of APIs that app
-developers can use to access these same data management functions. From a
-running server, the Swagger API documentation can be found at `/api/swagger`
-or from the front end by clicking the API documentation link in the sidebar.
-
-### Installation
-
-- Production on Amazon Web Service: See [Installation Notes][production-aws-url]
-- Development on Mac OSX: [Installation Notes][development-mac-osx]
-- Development using Docker: [Installation Notes][development-docker]
-
-### Starting SEED Platform
-
-In production the following two commands will run the web server (uWSGI) and
-the background task manager (Celery) with:
-
-```
-bin/start_uwsgi.sh
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">标准能效数据 (SEED) 平台™</font></font></h2><a id="user-content-standard-energy-efficiency-data-seed-platform" class="anchor" aria-label="永久链接：标准能效数据 (SEED) Platform™" href="#standard-energy-efficiency-data-seed-platform"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://github.com/SEED-platform/seed/actions?query=branch%3Adevelop"><img src="https://github.com/SEED-platform/seed/workflows/CI/badge.svg?branch=develop" alt="构建状态" style="max-width: 100%;"></a> <a href="https://coveralls.io/github/SEED-platform/seed?branch=HEAD" rel="nofollow"><img src="https://camo.githubusercontent.com/4cd2541c4fc04b4bf4ff240c0860e6eb38183f41f436e04fd630e62ae3c5bd7b/68747470733a2f2f636f766572616c6c732e696f2f7265706f732f6769746875622f534545442d706c6174666f726d2f736565642f62616467652e7376673f6272616e63683d48454144" alt="覆盖状态" data-canonical-src="https://coveralls.io/repos/github/SEED-platform/seed/badge.svg?branch=HEAD" style="max-width: 100%;"></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SEED 平台是一个基于 Web 的应用程序，可帮助组织轻松管理大型建筑群的能源绩效数据。</font><font style="vertical-align: inherit;">用户可以结合多个来源的数据，对其进行清理和验证，并与其他人共享信息。</font><font style="vertical-align: inherit;">该软件应用程序提供了一种简单、灵活且经济高效的方法来提高数据的质量和可用性，以帮助展示能源效率的经济和环境效益、实施计划和确定投资活动目标。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SEED 应用程序是用 Python/Django 编写的，前端使用 AngularJS、Bootstrap 和其他 JavaScript 库。</font><font style="vertical-align: inherit;">后端数据库要求是PostgreSQL。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SEED Web 应用程序提供了一个基于浏览器的界面，供用户上传和管理其建筑数据，还提供了一整套 API，应用程序开发人员可以使用它们来访问这些相同的数据管理功能。</font><font style="vertical-align: inherit;">在正在运行的服务器中，可以</font></font><code>/api/swagger</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+通过单击侧边栏中的 API 文档链接在前端或从前端找到 Swagger API 文档。</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装</font></font></h3><a id="user-content-installation" class="anchor" aria-label="永久链接：安装" href="#installation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Amazon Web Service 上的生产：请参阅</font></font><a href="http://www.github.com/seed-platform/seed/wiki/Installation"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装说明</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mac OSX 上的开发：</font></font><a href="https://github.com/SEED-platform/seed/blob/develop/docs/source/setup_osx.rst"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装说明</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使用 Docker 进行开发：</font></font><a href="https://github.com/SEED-platform/seed/blob/develop/docs/source/setup_docker.rst"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装说明</font></font></a></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">启动 SEED 平台</font></font></h3><a id="user-content-starting-seed-platform" class="anchor" aria-label="永久链接：启动 SEED 平台" href="#starting-seed-platform"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在生产环境中，以下两个命令将运行 Web 服务器 (uWSGI) 和后台任务管理器 (Celery)：</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>bin/start_uwsgi.sh
 bin/start_celery.sh
-```
-
-In development mode, you can start the web server (uWSGI) and the background
-task manager (Celery) with:
-
-```
-./manage.py runserver
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="bin/start_uwsgi.sh
+bin/start_celery.sh" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在开发模式下，您可以使用以下命令启动Web服务器（uWSGI）和后台任务管理器（Celery）：</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>./manage.py runserver
 celery -A seed worker -l INFO -c 4 --max-tasks-per-child 1000 -EBS django_celery_beat.schedulers:DatabaseScheduler
-```
-
-### Developer Resources
-
-- Source code documentation is on the [SEED website][code-documentation] and there are links to [older versions][code-documentations-links] as needed.
-- Several notes regarding Django and AngularJS integration: See [Developer Resources][developer-resources]
-
-#### Testing
-
-- Running tests: See [Testing Notes][developer-testing-notes]
-
-### Copyright
-
-See the information in the [LICENSE.md](LICENSE.md) file.
-
-[code-documentation]: https://seed-platform.org/code_documentation/latest/
-[code-documentation-links]: https://seed-platform.org/developer_resources/
-[development-docker]: https://github.com/SEED-platform/seed/blob/develop/docs/source/setup_docker.rst
-[development-mac-osx]: https://github.com/SEED-platform/seed/blob/develop/docs/source/setup_osx.rst
-[production-aws-url]: http://www.github.com/seed-platform/seed/wiki/Installation
-[developer-resources]: https://github.com/SEED-platform/seed/blob/develop/docs/source/developer_resources.rst
-[developer-testing-notes]: https://github.com/SEED-platform/seed/blob/develop/docs/source/developer_resources.rst#testing
-[build-img]: https://github.com/SEED-platform/seed/workflows/CI/badge.svg?branch=develop
-[build-url]: https://github.com/SEED-platform/seed/actions?query=branch%3Adevelop
-[coveralls-img]: https://coveralls.io/repos/github/SEED-platform/seed/badge.svg?branch=HEAD
-[coveralls-url]: https://coveralls.io/github/SEED-platform/seed?branch=HEAD
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="./manage.py runserver
+celery -A seed worker -l INFO -c 4 --max-tasks-per-child 1000 -EBS django_celery_beat.schedulers:DatabaseScheduler" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发者资源</font></font></h3><a id="user-content-developer-resources" class="anchor" aria-label="永久链接：开发者资源" href="#developer-resources"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">源代码文档位于</font></font><a href="https://seed-platform.org/code_documentation/latest/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SEED 网站</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上，并且根据需要提供了 [旧版本][代码文档链接] 的链接。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关 Django 和 AngularJS 集成的几点说明：请参阅</font></font><a href="https://github.com/SEED-platform/seed/blob/develop/docs/source/developer_resources.rst"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发人员资源</font></font></a></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h4 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">测试</font></font></h4><a id="user-content-testing" class="anchor" aria-label="永久链接：测试" href="#testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运行测试：参见</font></font><a href="https://github.com/SEED-platform/seed/blob/develop/docs/source/developer_resources.rst#testing"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">测试说明</font></font></a></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">版权</font></font></h3><a id="user-content-copyright" class="anchor" aria-label="永久链接：版权所有" href="#copyright"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="/SEED-platform/seed/blob/develop/LICENSE.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请参阅LICENSE.md</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件中的信息</font><font style="vertical-align: inherit;">。</font></font></p>
+</article></div>
